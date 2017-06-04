@@ -44,6 +44,7 @@ s.accessible()
 s._Secretive__inaccessible()
 print
 
+
 ## a class variable can be accessed and changed by all instances in the class
 ## both instance variables and class variables are class attributes
 ## self.var is instance variable; class.var is class variable
@@ -67,5 +68,5 @@ print "class variable can be accessed by all instances"
 ## Assigning a new value as an instance variable to m1
 m1.members="Two"
 print "Assigning a new value as an instance variable to m1, \
-\nm1.members = {}; m2.members = {}".format(m1.members, m2.members)
+\nm1.members = {}; m2.members = {}\n".format(m1.members, m2.members)
 
