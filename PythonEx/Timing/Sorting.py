@@ -68,9 +68,23 @@ print "{:10}{}\n".format("index of 21: ", linear_search(a,21))
 
 
 
-# def binary_search(arr,v):
-#     if len(arr)==1:
+def binary_search(arr,v):
+    start=0
+    end=len(arr)
+    while start<end-1:
+        mid=int((start+end)/2)
+        if arr[mid]==v:
+            return mid
+        if arr[mid]>v:
+            end=mid
+        if arr[mid]<v:
+            start=mid
+    return None
         
+random.shuffle(a)
+print "{:10}{}".format("array", a)
+print "{:10}{}".format("bs_index of 7: ", binary_search(a,7))
+print "{:10}{}\n".format("bs_index of 21: ", binary_search(a,21))
 
 
 
@@ -131,9 +145,10 @@ def merge_sort(arr,p,q,r):  # p<=q<r are indices in arr
             j+=1
     return arr
 
-random.shuffle(a)
-print "{:10}{}".format("unsorted", a)
-print "{:10}{}\n".format("merge_sort", merge_sort(a,0,10,20))
+b=np.arange(6)
+random.shuffle(b)
+print "{:10}{}".format("unsorted", b)
+print "{:10}{}\n".format("merge_sort", merge_sort(b,0,3,6))
             
 
 
